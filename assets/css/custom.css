@@ -83,12 +83,18 @@ blockquote, blockquote p {
 
 .container .columns.four .sidebar {
     display: flex;
+    width: 870px;
 }
 
 .widget-about {
-    width: 50%;
+    width: 30%;
 }
 
 .widget.widget-latestposts {
     width: 50%;
+}
+
+.widget.widget-tagcloud {
+    margin-left: 1%;
+    width: 19%;
 }
