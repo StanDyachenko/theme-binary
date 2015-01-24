@@ -72,9 +72,9 @@ hr.large {
 }
 .site-header {
     width: 950px; /* Ширина слоя */
-    border-bottom: transparent;
     margin-right: auto; /* Отступ справа */
     margin-left: auto; /* Отступ слева */
+    border-bottom: transparent;
     background: transparent;
 }
 .site-header .header-top {

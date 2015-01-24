@@ -3,14 +3,7 @@
     margin-top: 175px;
     padding: 0px; /* Поля вокруг текста */
 	background: transparent;
-} 
-.site-header {
-	width: 950px; /* Ширина слоя */
-	margin-right: auto; /* Отступ справа */
-	margin-left: auto; /* Отступ слева */
-	background: transparent;
 }
-  
 .site-header .header-top {
 	background: url(https://bitbucket.org/standyachenko/ffff/downloads/logo.png);">
 }
