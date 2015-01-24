@@ -1,4 +1,149 @@
-body{
+form {
+    margin: 0 auto;
+}
+.search {
+    padding: 6px 15px 6px 30px;
+    margin: 3px;
+    background: url(https://bitbucket.org/standyachenko/ffff/downloads/search[1].png) no-repeat 8px 6px;
+}
+.rounded {
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+input[type=text] {
+    color: #241F1F;
+}
+input[type=button], input[type=button]:hover {
+    position: relative;
+    left: -6px;
+    border: 1px solid #adc5cf;
+    background: #e4f1f9; /* Old browsers */
+    background: -moz-linear-gradient(top, #e4f1f9 0%, #d5e7f3 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4f1f9), color-stop(100%, #d5e7f3)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e4f1f9 0%, #d5e7f3 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e4f1f9 0%, #d5e7f3 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e4f1f9 0%, #d5e7f3 100%); /* IE10+ */
+    background: linear-gradient(top, #e4f1f9 0%, #d5e7f3 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f1f9', endColorstr='#d5e7f3', GradientType=0 ); /* IE6-9 */
+    color: #7da2aa;
+    cursor: pointer;
+}
+.lighter, .light, .dark {
+    width: 95%;
+    height: 50px;
+}
+.light {
+    background: url('light_grey.jpg');
+}
+.light input[type=text] {
+    border: 1px solid #acb1b7;
+    background-color: #fff;
+}
+body {
+    color: #000;
+    font-family: Verdana, Geneva, sans-serif;
+    margin: 0; /* Убираем отступы */
+    margin-top: 0px;
+    background: url(https://bitbucket.org/standyachenko/ffff/downloads/lighter_grey.jpg);
+">
+}
+.blog-post, .blog-page {
+    padding: 30px;
+    padding: 1.875rem;
+    background-color: transparent;
+    border-bottom: solid #000;
+    border-bottom-width: 2px;
+    border-bottom-width:.125rem
+}
+.blog-pagination {
+    background-color: transparent;
+    border-bottom: transparent;
+}
+hr.large {
+    height: .1rem;
+    background: #000000;
+}
+.container .columns.four {
+    margin: 0; /* Отступы вокруг элемента */
+    margin-top: 0px;
+    padding: 0px; /* Поля вокруг текста */
+    background: transparent;
+}
+.site-header {
+    width: 950px; /* Ширина слоя */
+    border-bottom: transparent;
+    margin-right: auto; /* Отступ справа */
+    margin-left: auto; /* Отступ слева */
+    background: transparent;
+}
+.site-header .header-top {
+    background: url(https://bitbucket.org/standyachenko/ffff/downloads/logo.png);
+">
+}
+.site-header .header-top h1 a {
+    color: transparent;
+}
+.site-content {
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+    visibility: visible;
+}
+.widget-about {
+    background: transparent;
+}
+.widget-title {
+    background: transparent;
+}
+.popular-posts {
+    background: transparent;
+}
+.widget {
+<!--
+background: transparent; /* Цвет фона */
+-->
+<!--
+color: #000; /* Цвет текста */
+-->
+    padding: 1px; /* Поля вокруг текста */
+    -moz-border-radius: 10px; /* Для Firefox 3 */
+    -webkit-border-radius: 10px; /* Для Safari 4 и Chrome */
+    border-radius: 10px; /* Для современных браузеров */
+}
+blockquote {
+    margin: 0 0 30px;
+    padding: 0 0 0 81px;
+    background: url(http://www.brainpickings.org/wp-content/themes/brainpickings_p2h/images/bg-blockquote.gif) no-repeat 0 3px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: left;
+    word-spacing: 0.3ex;
+    font-family: url(http://fonts.googleapis.com/css?family=Tenor+Sans&subset=latin,cyrillic);
+    border-left: transparent;
+    line-height: 21px;
+    letter-spacing: -1px;
+    min-height: 53px;
+}
+blockquote, blockquote p {
+    color: #000;
+    font-style: normal;
+}
+p img {
+    display: block;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+</style>
+
+
+  body{
  color:#636363;
  line-height:1.625;
  font-family:'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,sans-serif;
