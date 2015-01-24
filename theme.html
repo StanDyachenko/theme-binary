@@ -97,14 +97,73 @@
         </ul>
       </nav>
     </div>
-    <div class="twelve columns">
+
+    <div class="four columns">
+        <div class="sidebar" ice:editable="*">
+            <!-- <div class="lighter">
+            <form>
+                    <span><input type="text" class="search rounded" placeholder="Искать..."></span>
+                    </form>
+                             </div> -->
+            <div class="widget widget-about">
+                <h2 class="widget-title"><a href="/">{{ site.author }}</a></h2>
+                <div class="widget-content">
+                    <div class="avatar"> <img src="{{ site.avatar }}" alt="{{ site.author }}" /> </div>
+                    <p>{{ site.bio }}</p>
+                    <ul class="social-links">
+                        {% if site.twitter %}
+                        <li> <a target="_blank" href="https://twitter.com/standyachenko" rel="nofollow" title="Twitter" ><img src="https://bitbucket.org/standyachenko/ffff/downloads/twitter.png"width="24" height="24" ></a> </li>
+                        {% endif %}
+                        {% if site.facebook %}
+                        <li> <a href="{{ site.facebook }}" title="Facebook" target="_blank"> <i class="icon-facebook"></i> </a> </li>
+                        {% endif %}
+                        {% if site.googleplus %}
+                        <li> <a href="{{ site.googleplus }}?rel=author" title="Google+" target="_blank"> <i class="icon-google-plus"></i> </a> </li>
+                        {% endif %}
+                        {% if site.linkedin %}
+                        <li> <a target="_blank" href="http://vk.com/id117268700" rel="nofollow" title="вКонтакте" ><img src="https://bitbucket.org/standyachenko/ffff/downloads/vk.png"width="24" height="24" ></a> </li>
+                        {% endif %}
+                        <li> <a target="_blank" href="http://stan.postach.io/feed" rel="nofollow" title="RSS" ><img src="https://bitbucket.org/standyachenko/ffff/downloads/rss.png"width="24" height="24" ></a>
+                        <li> </li>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="widget widget-latestposts">
+                <h2 class="widget-title">Заметки</h2>
+                <div class="widget-content popular-posts"> {% if posts_recent %}
+                    <ul>
+                        {% for post in posts_recent %}
+                        {% if loop.index <= 5 and loop.index > 0 %}
+                        <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% endif %} </div>
+            </div>
+            <!--<div><a target="_blank" title="LiveLib" href="http://www.livelib.ru/reader/StanDyachenko"><img alt="LiveLib" src="http://www.livelib.ru/reader/StanDyachenko/widget/r5-w250-cededed-o45-t.png" style="border: 0;"></a></div>-->
+            <div class="widget widget-tagcloud">
+                <h2 class="widget-title">Тег</h2>
+                <div class="widget-content tag-cloud"> {% if site.tags %}
+                    <ul>
+                        {% for tag in site.tags %}
+                        <li><a href="/tag/{{ tag.name }}">#{{ tag.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %} </div>
+            </div>
+        </div>
+    </div>
+
+      <div class="twelve columns">
       <div class="site-content"> {% if is_home or is_tag %}
-        {% if is_tag %} 
-        <!-- <h2 class="tag-header">Showing all posts tagged {{ tag }}:</h2> --> 
+        {% if is_tag %}
+        <!-- <h2 class="tag-header">Showing all posts tagged {{ tag }}:</h2> -->
         {% endif %}
-        
-        
-        
+
+
+
         {% if posts %}
         <section itemscope itemtype="http://schema.org/Blog" class="blog-feed"> {% for post in posts %}
           <article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" class="blog-post feed-item">
@@ -121,8 +180,8 @@
                   <p align="right" class="post-comment-count"> <a href="{{ post.permalink }}{% if site.disqus %}#disqus_thread{% endif %}"
                                                 class='dsq-comment-count comment-link commentslink'>О комментариев</a> </p>
                   <p align="right">
-                    <!-- <p><a href="{{ post.permalink }}" class="post-permalink">Поделиться</a></p> --> 
-                    <a href="http://vk.com/share.php?url=http://stan.postach.io{{ post.permalink }}" target="_blank">Поделиться ВКонтакте</a></p>                  
+                    <!-- <p><a href="{{ post.permalink }}" class="post-permalink">Поделиться</a></p> -->
+                    <a href="http://vk.com/share.php?url=http://stan.postach.io{{ post.permalink }}" target="_blank">Поделиться ВКонтакте</a></p>
                 </div>
               </div>
             </header>
@@ -135,7 +194,7 @@
                 {% if photo and loop.index == 1 %}
                 <div class="image">
                   <p><a href="{{ post.permalink }}"><img src="{{ photo.square_75 }}" alt="Featured Photo" align="middle"/></a></p></div>
-                
+
                 <p class="desc">{{ post.content|striptags|truncate(250) }}</p>
                 <p><a href="{{ post.permalink }}">Читать дальше</a></p>
                 {% endif %}
@@ -146,7 +205,7 @@
               {% endif %} </div>
           </article>
           {% endfor %} </section>
-        {% if site.disqus %} 
+        {% if site.disqus %}
         <script type="text/javascript">
                     var disqus_shortname = '{{ site.disqus }}';
                     (function() {
@@ -154,7 +213,7 @@
                         dsq.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
                         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                     })();
-                    </script> 
+                    </script>
         {% endif %}
         {% else %}
         <div class="blog-feed">
@@ -217,7 +276,7 @@
                   <time datetime="{{ link.created_at }}" class="post-date">{{ link.created_at|date_format }}</time>
                 </p>
                 <p class="right">
-                <a href="http://vk.com/share.php?url=http://stan.postach.io{{ post.permalink }}" target="_blank">Поделиться ВКонтакте</a>   
+                <a href="http://vk.com/share.php?url=http://stan.postach.io{{ post.permalink }}" target="_blank">Поделиться ВКонтакте</a>
                 </p>
                 </div>
             </header>
@@ -257,63 +316,7 @@
         <p>Theme inspired by Stan Dyachenko | Powered by <a href="http://postach.io/">Postach.io</a></p>
       </div>
     </div>
-    <div class="four columns">
-      <div class="sidebar" ice:editable="*"> 
-        <!-- <div class="lighter">
-        <form>
-                <span><input type="text" class="search rounded" placeholder="Искать..."></span>
-                </form>
-                         </div> -->
-        <div class="widget widget-about">
-          <h2 class="widget-title"><a href="/">{{ site.author }}</a></h2>
-          <div class="widget-content">
-            <div class="avatar"> <img src="{{ site.avatar }}" alt="{{ site.author }}" /> </div>
-            <p>{{ site.bio }}</p>
-            <ul class="social-links">
-              {% if site.twitter %}
-              <li> <a target="_blank" href="https://twitter.com/standyachenko" rel="nofollow" title="Twitter" ><img src="https://bitbucket.org/standyachenko/ffff/downloads/twitter.png"width="24" height="24" ></a> </li>
-              {% endif %}
-              {% if site.facebook %}
-              <li> <a href="{{ site.facebook }}" title="Facebook" target="_blank"> <i class="icon-facebook"></i> </a> </li>
-              {% endif %}
-              {% if site.googleplus %}
-              <li> <a href="{{ site.googleplus }}?rel=author" title="Google+" target="_blank"> <i class="icon-google-plus"></i> </a> </li>
-              {% endif %}
-              {% if site.linkedin %}
-              <li> <a target="_blank" href="http://vk.com/id117268700" rel="nofollow" title="вКонтакте" ><img src="https://bitbucket.org/standyachenko/ffff/downloads/vk.png"width="24" height="24" ></a> </li>
-              {% endif %}
-              <li> <a target="_blank" href="http://stan.postach.io/feed" rel="nofollow" title="RSS" ><img src="https://bitbucket.org/standyachenko/ffff/downloads/rss.png"width="24" height="24" ></a>
-              <li> </li>
-              </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="widget widget-latestposts">
-          <h2 class="widget-title">Заметки</h2>
-          <div class="widget-content popular-posts"> {% if posts_recent %}
-            <ul>
-              {% for post in posts_recent %}
-              {% if loop.index <= 5 and loop.index > 0 %}
-              <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
-              {% endif %}
-              {% endfor %}
-            </ul>
-            {% endif %} </div>
-        </div>
-        <div><a target="_blank" title="LiveLib" href="http://www.livelib.ru/reader/StanDyachenko"><img alt="LiveLib" src="http://www.livelib.ru/reader/StanDyachenko/widget/r5-w250-cededed-o45-t.png" style="border: 0;"></a></div>
-        <div class="widget widget-tagcloud">
-          <h2 class="widget-title">Тег</h2>
-          <div class="widget-content tag-cloud"> {% if site.tags %}
-            <ul>
-              {% for tag in site.tags %}
-              <li><a href="/tag/{{ tag.name }}">#{{ tag.name }}</a></li>
-              {% endfor %}
-            </ul>
-            {% endif %} </div>
-        </div>
-      </div>
-    </div>
+
   </div>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 

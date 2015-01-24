@@ -78,4 +78,17 @@ blockquote, blockquote p {
 /* leshikhacker's edits */
 .container .columns.four {
     width: 870px;
+    margin: 0 auto;
+}
+
+.container .columns.four .sidebar {
+    display: flex;
+}
+
+.widget-about {
+    width: 50%;
+}
+
+.widget.widget-latestposts {
+    width: 50%;
 }
