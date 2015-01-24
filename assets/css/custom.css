@@ -74,3 +74,8 @@ blockquote, blockquote p {
 	color: #000;
 	font-style: normal;
 }
+
+/* leshikhacker's edits */
+.container .columns.four {
+    width: 870px;
+}
