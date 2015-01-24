@@ -1,19 +1,10 @@
-.container .columns.four {
-    margin: 0; /* Отступы вокруг элемента */
-    margin-top: 175px;
-    padding: 0px; /* Поля вокруг текста */
-	background: transparent;
-}
-.site-header .header-top {
-	background: url(https://bitbucket.org/standyachenko/ffff/downloads/logo.png);">
-}
 .site-header .header-top h1 a {
 	color: transparent;
 }
   
 .site-content {
 	position: relative;
-	width: 700px;
+	width: 870px;
 	padding: 40px;
 	margin: 0 auto;
 	background-color: #fff;
